@@ -1,0 +1,187 @@
+:root {
+  --bg-main: #0B0F17;
+  --card-bg: rgba(26, 34, 50, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --toyota-red: #E63946;
+  --telegram-blue: #0088CC;
+  --telegram-hover: #00A8FF;
+  --accent-glow: rgba(0, 136, 204, 0.25);
+  --text-main: #F1F5F9;
+  --text-muted: #94A3B8;
+  --input-bg: #111827;
+  --input-border: #374151;
+  --success-green: #10B981;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg-main);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(230, 57, 70, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 136, 204, 0.15) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: 'Kantumruy Pro', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 14px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 520px;
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 32px 26px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-glow);
+}
+
+.header-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(230, 57, 70, 0.12);
+  border: 1px solid rgba(230, 57, 70, 0.3);
+  color: var(--toyota-red);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #FFF;
+}
+
+p.subtitle {
+  margin: 0 0 24px;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.contact-badge-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.contact-badge {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--card-border);
+  padding: 10px 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-badge span.label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.contact-badge span.value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #38BDF8;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  margin: 16px 0 6px;
+  color: var(--text-muted);
+}
+
+input, select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--input-border);
+  border-radius: 10px;
+  background: var(--input-bg);
+  font-family: inherit;
+  font-size: 14px;
+  color: #FFF;
+  transition: all 0.25s ease;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--telegram-blue);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+button.btn-telegram {
+  background: linear-gradient(135deg, #0088CC 0%, #00A8FF 100%);
+  color: #FFF;
+  box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+}
+
+button.btn-telegram:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+}
+
+button.btn-copy {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  color: var(--text-main);
+}
+
+button.btn-copy:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.status {
+  font-size: 13px;
+  color: var(--success-green);
+  margin-top: 16px;
+  text-align: center;
+  min-height: 20px;
+  font-weight: 600;
+}

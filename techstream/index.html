@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toyota Techstream Licensing Request</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0B0F17;
+      --card-bg: rgba(26, 34, 50, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --toyota-red: #E63946;
+      --telegram-blue: #0088CC;
+      --telegram-hover: #00A8FF;
+      --mega-red: #D9272E;
+      --accent-glow: rgba(0, 136, 204, 0.25);
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --input-bg: #111827;
+      --input-border: #374151;
+      --success-green: #10B981;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg-main);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(230, 57, 70, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 136, 204, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Kantumruy Pro', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 14px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 520px;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px 26px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-glow);
+    }
+
+    .header-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(230, 57, 70, 0.12);
+      border: 1px solid rgba(230, 57, 70, 0.3);
+      color: var(--toyota-red);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #FFF;
+    }
+
+    p.subtitle {
+      margin: 0 0 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .contact-badge-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .contact-badge {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      padding: 10px 12px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .contact-badge span.label {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .contact-badge span.value {
+      font-size: 13px;
+      font-weight: 600;
+      color: #38BDF8;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: 13px;
+      margin: 16px 0 6px;
+      color: var(--text-muted);
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--input-border);
+      border-radius: 10px;
+      background: var(--input-bg);
+      font-family: inherit;
+      font-size: 14px;
+      color: #FFF;
+      transition: all 0.25s ease;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--telegram-blue);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 14px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    button.btn-telegram {
+      background: linear-gradient(135deg, #0088CC 0%, #00A8FF 100%);
+      color: #FFF;
+      box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+    }
+
+    button.btn-telegram:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+    }
+
+    button.btn-mega {
+      background: rgba(217, 39, 46, 0.15);
+      border: 1px solid rgba(217, 39, 46, 0.4);
+      color: #FF6B6B;
+    }
+
+    button.btn-mega:hover {
+      background: rgba(217, 39, 46, 0.25);
+    }
+
+    button.btn-copy {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+    }
+
+    button.btn-copy:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .status {
+      font-size: 13px;
+      color: var(--success-green);
+      margin-top: 16px;
+      text-align: center;
+      min-height: 20px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="header-tag">Toyota Techstream</div>
+  <h2>Licensing Request System</h2>
+  <p class="subtitle">បញ្ចូល Software ID និង Version រួចចុចផ្ញើទិន្នន័យដើម្បីទទួលបាន Key តាមរយៈ Telegram</p>
+
+  <div class="contact-badge-container">
+    <div class="contact-badge">
+      <span class="label">Telegram Support</span>
+      <span class="value">@sunmengheang</span>
+    </div>
+    <div class="contact-badge">
+      <span class="label">Phone Support</span>
+      <span class="value">069 778 837</span>
+    </div>
+  </div>
+
+  <form id="form">
+    <!-- ប្រអប់បញ្ចូល MEGA Link (បន្ថែមថ្មី) -->
+    <label for="megaUrl">Mega Link ( Version 18 Text String)</label>
+    <input id="megaUrl" type="url" placeholder="https://mega.nz/file/..." value="https://mega.nz/file/eb4XGBBa#kmcahOsBXArJOTbkM-WG-HKp2KrjzXC6PVke5doYrNA">
+
+    <label for="sid">Software ID</label>
+    <input id="sid" maxlength="128" placeholder="បញ្ចូល Software ID របស់អ្នកទីនេះ..." required>
+    
+    <div class="row">
+      <div>
+        <label for="period">Period (days)</label>
+        <input id="period" type="number" min="1" max="100000" value="3500" required>
+      </div>
+      <div>
+        <label for="version">Version</label>
+        <select id="version">
+          <option value="v11">Version 11</option>
+          <option value="v12">Version 12</option>
+          <option value="v13">Version 13</option>
+          <option value="v14">Version 14</option>
+          <option value="v15">Version 15</option>
+          <option value="v16">Version 16</option>
+          <option value="v17">Version 17</option>
+          <option value="v18" selected>Version 18</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="btn-group">
+      <!-- ប៊ូតុងទាញយក/បើក Link Mega (បន្ថែមថ្មី) -->
+      <button class="btn-mega" type="button" id="openMegaBtn">
+        <span>📁 បើក Mega Link (Version 18)</span>
+      </button>
+
+      <button class="btn-telegram" type="submit">
+        <span>✈️ ផ្ញើទៅកាន់ Telegram (@sunmengheang)</span>
+      </button>
+      
+      <button class="btn-copy" type="button" id="copyBtn">
+        <span>📋 ចម្លងព័ត៌មានទុក (Copy Info)</span>
+      </button>
+    </div>
+  </form>
+
+  <div id="status" class="status"></div>
+</main>
+
+<script>
+  const TELEGRAM_BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
+  const TELEGRAM_CHAT_ID = '@sunmengheang';
+  const ADMIN_TELEGRAM_USER = 'sunmengheang';
+
+  const $ = id => document.getElementById(id);
+
+  function buildMessageText(sid, days, version, megaUrl) {
+    let msg = `🔔 **Toyota Techstream Request**\n\n` +
+              `🛠 **Version:** ${version}\n` +
+              `🆔 **Software ID:** \`${sid}\`\n` +
+              `📅 **Period:** ${days} days\n` +
+              `📞 **Contact:** 069778837`;
+    
+    if (megaUrl) {
+      msg += `\n🔗 **Mega File:** ${megaUrl}`;
+    }
+    return msg;
+  }
+
+  // 1. ប៊ូតុងបើក Mega Link ដោយផ្ទាល់
+  $('openMegaBtn').addEventListener('click', () => {
+    let megaUrl = $('megaUrl').value.trim();
+    if (!megaUrl) {
+      alert('សូមបញ្ចូល Mega Link!');
+      return;
+    }
+    window.open(megaUrl, '_blank');
+    $('status').textContent = 'បានបើក Mega Link រួចរាល់! 📁';
+  });
+
+  // 2. Submit Form & Send via Telegram
+  $('form').addEventListener('submit', async e => {
+    e.preventDefault();
+    
+    let sid = $('sid').value.trim();
+    let days = $('period').value;
+    let version = $('version').value;
+    let megaUrl = $('megaUrl').value.trim();
+
+    let messageText = buildMessageText(sid, days, version, megaUrl);
+
+    $('status').textContent = 'កំពុងផ្ញើ និងបើក Telegram...';
+
+    // ផ្ញើតាម Bot API
+    if(TELEGRAM_BOT_TOKEN !== 'YOUR_BOT_TOKEN_HERE') {
+      try {
+        await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text: messageText,
+            parse_mode: 'Markdown'
+          })
+        });
+      } catch (err) {
+        console.log("Bot send skipped or failed:", err);
+      }
+    }
+
+    // បើក Telegram Direct Chat
+    let encodedMessage = encodeURIComponent(messageText.replace(/\*/g, '').replace(/`/g, ''));
+    let telegramUrl = `https://t.me/${ADMIN_TELEGRAM_USER}?text=${encodedMessage}`;
+    
+    window.open(telegramUrl, '_blank');
+    $('status').textContent = 'បានបើក Telegram រួចរាល់! ✅';
+  });
+
+  // 3. Copy Info Button
+  $('copyBtn').addEventListener('click', () => {
+    let sid = $('sid').value.trim();
+    let days = $('period').value;
+    let version = $('version').value;
+    let megaUrl = $('megaUrl').value.trim();
+
+    if (!sid) {
+      alert('សូមបញ្ចូល Software ID ជាមុនសិន!');
+      return;
+    }
+
+    let textToCopy = `Toyota Techstream Request\nVersion: ${version}\nSoftware ID: ${sid}\nPeriod: ${days} days\nPhone: 069778837`;
+    if (megaUrl) {
+      textToCopy += `\nMega Link: ${megaUrl}`;
+    }
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      $('status').textContent = 'បានចម្លងទិន្នន័យ (Copy) ដោយជោគជ័យ! 📋';
+      setTimeout(() => { $('status').textContent = ''; }, 3000);
+    });
+  });
+</script>
+
+</body>
+</html>

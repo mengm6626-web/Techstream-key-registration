@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us - Toyota Techstream Licensing Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0B0F17;
+      --card-bg: rgba(26, 34, 50, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --toyota-red: #E63946;
+      --telegram-blue: #0088CC;
+      --accent-glow: rgba(0, 136, 204, 0.25);
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --input-bg: #111827;
+      --input-border: #374151;
+      --success-green: #10B981;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg-main);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(230, 57, 70, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 136, 204, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Kantumruy Pro', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 14px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 560px;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px 26px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-glow);
+    }
+
+    .header-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(230, 57, 70, 0.12);
+      border: 1px solid rgba(230, 57, 70, 0.3);
+      color: var(--toyota-red);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #FFF;
+    }
+
+    p.subtitle {
+      margin: 0 0 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .info-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .info-card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #38BDF8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-card p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .contact-badge-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .contact-badge {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      padding: 12px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .contact-badge span.label {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .contact-badge span.value {
+      font-size: 14px;
+      font-weight: 600;
+      color: #38BDF8;
+    }
+
+    .btn-back {
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 14px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #0088CC 0%, #00A8FF 100%);
+      color: #FFF;
+      box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      margin-top: 10px;
+    }
+
+    .btn-back:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+<main class="wrap">
+  <div class="header-tag">អំពីយើង - About Us</div>
+  <h2>Toyota Techstream Support</h2>
+  <p class="subtitle">យើងខ្ញុំផ្តល់ជូននូវសេវាកម្មសម្រួល និងបង្កើត Activation Keys សម្រាប់កម្មវិធី Toyota Techstream គ្រប់កំណែ (Version 11 ដល់ Version 18) ប្រកបដោយទំនុកចិត្ត និងរហ័សទាន់ចិត្ត។</p>
+
+  <div class="info-card">
+    <h3>🛠️ សេវាកម្មរបស់យើង (Our Services)</h3>
+    <p>ផ្តល់ការគាំទ្រផ្នែកបច្ចេកទេស និង Activation Key សម្រាប់ Software Diagnostic រថយន្ត Toyota / Lexus។ យើងខ្ញុំធានាជូននូវភាពងាយស្រួលក្នុងការស្នើសុំ Key តាមរយៈប្រព័ន្ធ Telegram Direct Chat។</p>
+  </div>
+
+  <div class="info-card">
+    <h3>⚡ របៀបប្រើប្រាស់ (How It Works)</h3>
+    <p>1. បញ្ចូល Software ID និង Version នៅក្នុងទំព័រដើម<br>
+       2. ចុច "ផ្ញើទៅកាន់ Telegram" ដើម្បីផ្ញើព័ត៌មានមកកាន់អ្នកជំនាញ<br>
+       3. ទទួលបាន Key ត្រឡប់មកវិញក្នុងពេលឆាប់ៗ</p>
+  </div>
+
+  <div class="contact-badge-container">
+    <div class="contact-badge">
+      <span class="label">Telegram Support</span>
+      <span class="value">@sunmengheang</span>
+    </div>
+    <div class="contact-badge">
+      <span class="label">Phone Support</span>
+      <span class="value">069 778 837</span>
+    </div>
+  </div>
+
+  <a href="index.html" class="btn-back">
+    <span>⬅️ ត្រឡប់ទៅទំព័រដើម (Back to Home)</span>
+  </a>
+</main>
+
+</body>
+</html>
